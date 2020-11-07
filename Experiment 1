@@ -31,7 +31,7 @@ dataset and do the summary statistics and graphs with interpretation.
   studentinfo$sex=factor(studentinfo$sex,labels=c(‘Male’,’Female’))
   
   print(studentinfo)
-  
+ 
   summary(studentinfo)
   
   plot(studentinfo$age,type=’l’,main=’age of students’,col=’green’)
