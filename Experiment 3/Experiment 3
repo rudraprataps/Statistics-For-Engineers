@@ -1,0 +1,110 @@
+#If you have the same question then you can just copy and paste the code otherwise you can make some changes in it accordingly. 
+
+# This was the question which was given to me so please read the question first. 
+
+# Question 1:- CALCULATE THE COEFFICIENT OF CORRELATION USING BUILT-IN FUNCTIONS
+  
+  x=c(177,163,173,182,171,168,174,184)
+  
+  y=c(71,67,77,85,69,62,73,80)
+  
+  cor(x,y)
+  
+  [1] 0.8281102
+  
+  cor(x,y,method="pearson")
+  
+  [1] 0.8281102
+  
+  cor(x,y,method="spearman")
+  
+  [1] 0.8571429
+  
+  plot(x,y) 
+  
+  cor(y,x)
+  
+  [1] 0.8281102
+  
+# Question 2:- 2.	CALCULATE THE COEFFICIENT OF CORRELATION USING FORMULAE
+
+#PEARSON’S CORRELATION
+
+  x=c(177,163,173,182,171,168,174,184)
+  
+  y=c(71,67,77,85,69,62,73,80)
+  
+#correlation coefficient r=cov(x,y)/sd(x)*sd(y)
+  
+  cov(x,y)
+  
+  [1] 42.85714
+  
+  var(x,y)
+  
+  [1] 42.85714
+  
+  sd(x)
+  
+  [1] 6.969321
+  
+  sd(y)
+  
+  [1] 7.425824
+  
+  sd(x)*sd(y)
+  
+  [1] 51.75295
+  
+  r=cov(x,y)/(sd(x)*sd(y))
+  
+  cov(x,y)/(sd(x)*sd(y))
+  
+  [1] 0.8281102
+  
+# Question 3:-OBTAIN LINEAR REGRESSION OF Y ON X AND X ON Y
+
+   x=c(177,163,173,182,171,168,174,184)
+  y=c(71,67,77,85,69,62,73,80)
+  cor(x,y)
+  [1] 0.8281102
+  cor.test(x,y)
+
+#Pearson's product-moment correlation
+
+#data:  x and y
+#t = 3.6186, df = 6, p-value = 0.01112
+#alternative hypothesis: true correlation is not equal to 0
+#95 percent confidence interval:
+#0.2964014 0.9679430
+#sample estimates:
+#      cor 
+#0.8281102 
+
+  lm(x~y)
+
+#Call:
+#lm(formula = x ~ y)
+
+#Coefficients:
+#(Intercept)            y  
+#   117.2642       0.7772  
+
+ lm(y~x)
+
+#Call:
+#lm(formula = y ~ x)
+
+#Coefficients:
+#(Intercept)            x  
+#  -80.5294       0.8824  
+
+  abline(lm(x~y))
+ 
+# Question 4:-	DRAW THE SCATTER DIAGRAM AND THE FITTED LINE
+ 
+  abline(lm(x~y))
+  
+  abline(lm(y~x))
+
+  
