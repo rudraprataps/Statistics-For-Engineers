@@ -1,0 +1,67 @@
+#If you have the same question then you can just copy and paste the code otherwise you can make some changes in it accordingly. 
+
+# This was the question which was given to me so please read the question first. 
+
+# Question:-•	FIND MEAN AND VARIANCE USING THE FORMULA
+
+# RLab
+    x=c(0,1,2,3,4,5,6,7)
+    p=c(0,1/10,2/10,2/10,3/10,1/100,2/100,17/100)
+    mean=sum(x*p)
+    mean
+    [1] 3.66
+    variance=sum(x^2*p)-(mean^2)
+    variance
+    [1] 3.4044
+    
+#VISUALISE THE ‘PDF’ AND ‘CDF’
+
+#PDF:
+    x=c(0,1,2,3,4,5,6,7)
+    p=c(0,1/10,2/10,2/10,3/10,1/100,2/100,17/100)
+    plot(x,p,type="l",main="PDF of discrete random variable",xlab="x",ylab="PDF")
+
+#CDF:
+    cumsum(p)
+    [1] 0.00 0.10 0.30 0.50 0.80 0.81 0.83 1.00
+    cdf=c(0,cumsum(p))
+    cdf
+    [1] 0.00 0.00 0.10 0.30 0.50 0.80 0.81 0.83 1.00
+
+    stepfun(x,cdf)
+    #Step function
+    #Call: stepfun(x, cdf)
+    x[1:8] =      0,      1,      2,  ...,      6,      7
+    9 plateau levels =      0,      0,    0.1,  ...,   0.83,      1
+    cdf.plot=stepfun(x,cdf)
+    plot.stepfun(cdf.plot,xlab="x",ylab="CDF",do.points=FALSE)
+    
+#QUESTION 2: VISUALISE ‘PDF’ AND ‘CDF’ FOR THE FUNCTION
+    
+    x=seq(0,1,0.01)
+    f1=6*x*(1-x)
+    x1=seq(-1,0,0.01)
+    f2=0*x1
+    x2=seq(1,2,0.01)
+    f3=0*x2
+    plot(x,f1,type='l',main="PDF for continuous distribution",xlab="x",
+    ylab="PDF",xlim=c(-1,2),ylim=c(0,2))
+    par(new=TRUE)
+    plot(x1,f2,type='l',main="PDF for continuous distribution",xlab="x",
+    ylab="PDF",xlim=c(-1,2),ylim=c(0,2))
+    par(new=TRUE)
+    plot(x2,f3,type='l',main="PDF for continuous distribution",xlab="x",
+    ylab="PDF",xlim=c(-1,2),ylim=c(0,2))
+    
+    y=seq(0,1,0.01)
+    cdf=c(rep(0,50),6*y*(1-y),rep(1,50))
+    y0=seq(-0.50,1.50,0.01)
+    cdf=c(rep(0,50),3*(y^2)-2*(y^3),rep(1,50))
+    plot(y0,cdf,type='l',main="CDF for continuous distribution",
+    xlab="x",ylab="CDF",ylim=c(0,2))     
+
+
+
+
+
+
