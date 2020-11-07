@@ -1,0 +1,59 @@
+#If you have the same question then you can just copy and paste the code otherwise you can make some changes in it accordingly. 
+
+# This was the question which was given to me so please read the question first. 
+
+# Question:- Question is mentioned in the PDF. 
+
+#1.
+  (i)
+    pbinom(7,20,1/2) [1] 0.131588
+ 
+  (ii)    
+    1-pbinom(12,20,1/2) [1] 0.131588
+
+  (iii)
+    pbinom(12,20,1/2) - pbinom(7,20,1/2) [1] 0.736824
+
+
+  Plotting: -
+    x=dbinom(c(0:20),20,1/2)
+    y=c(0:20)
+    plot(y,x,main="Binomial Distribution",type="h")
+    points(y,x,pch=16,cex=1)
+    
+#2.
+  (i)
+    pbinom(79,200,1/2) [1] 0.001817474
+
+  (ii)
+    1-pbinom(120,200,1/2) [1] 0.001817474
+
+  (iii)
+    pbinom(120,200,1/2)-pbinom(79,200,1/2) [1] 0.9963651
+ 
+#3.
+
+  (i)
+    pbinom(799,2000,1/2) [1] 1.162645e-19
+
+  (ii)
+    1-pbinom(1200,2000,1/2)
+    [1] 0
+
+  (iii)
+    pbinom(1200,2000,1/2)-pbinom(799,2000,1/2)
+    [1] 1
+    
+#4.
+
+  (i)
+    1-pbinom(4,10,1/2) 
+    [1] 0.6230469
+
+  (ii)
+    dbinom(5,10,1/2) 
+    [1] 0.2460938
+
+  (iii)
+    pbinom(6,10,1/2)-pbinom(3,10,1/2) 
+    [1] 0.65625
