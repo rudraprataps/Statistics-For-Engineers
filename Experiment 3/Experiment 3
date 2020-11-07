@@ -31,7 +31,7 @@
 #PEARSON’S CORRELATION
 
   x=c(177,163,173,182,171,168,174,184)
-  
+
   y=c(71,67,77,85,69,62,73,80)
   
 #correlation coefficient r=cov(x,y)/sd(x)*sd(y)
